@@ -4,14 +4,13 @@ A Flutter package for custom made breathing and rotating button written in Dart.
 
 #### Do star the repo. Thanks :+1:
 ### Screenshots
- <img src = "Screenshot_20200226-181609.png" height = "300em"/> <img src = "Screenshot_20200226-181614.png" height = "300em"/>  <img src = "Screenshot_20200226-185336.png" height = "300em"/>
+ <img src = "Screenshot_20200226-181609.png" height = "300em"/> <img src = "Screenshot_20200226-181614.png" height = "300em"/>  <img src = "Screenshot_20200226-213216.png" height = "300em"/>
 
 ### Usage
 [Example](https://github.com/OmiWakode/breathing_rotating_button/blob/master/example/example_app.dart)
 To use this package:
  * add the dependency to your pubspec [pubspec.yaml](https://github.com/OmiWakode/breathing_rotating_button/blob/master/pubspec.yaml) file.
  ```
-  yaml
     dependencies:
         flutter:
             sdk: flutter
@@ -19,7 +18,6 @@ To use this package:
  ```
 ### How to use
  ```
-  dart
  class SpinScreen extends StatefulWidget {
    @override
    _SpinScreenState createState() => _SpinScreenState();
@@ -50,7 +48,7 @@ To use this package:
 and
 [Abhishek Upmanyu](https://github.com/abhishekUpmanyu)
 
-###License
+### License
 ```
     Copyright 2020 Omi Wakode
     
