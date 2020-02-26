@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'dart:math' show Random, pi;
 
 
-class BreathingButton extends StatefulWidget {
+class BreathingRotatingButton extends StatefulWidget {
   final Color foreground;
   final Color background;
   final IconData icon;
@@ -11,12 +11,12 @@ class BreathingButton extends StatefulWidget {
   final double radius;
   final int duration;
   final bool rotate;
-  BreathingButton({@required this.radius, this.background, this.foreground,this.icon, this.iconColor=Colors.teal, this.duration=500,this.rotate});
+  BreathingRotatingButton({@required this.radius, this.background, this.foreground,this.icon, this.iconColor=Colors.teal, this.duration=500,this.rotate});
   @override
-  _BreathingButtonState createState() => _BreathingButtonState();
+  _BreathingRotatingButtonState createState() => _BreathingRotatingButtonState();
 }
 
-class _BreathingButtonState extends State<BreathingButton> with TickerProviderStateMixin {
+class _BreathingRotatingButtonState extends State<BreathingRotatingButton> with TickerProviderStateMixin {
   //Rotation Animation
   AnimationController _circleAnimationController;
   Animation<double> _circleAnimation;
@@ -124,7 +124,7 @@ class _BreathingButtonState extends State<BreathingButton> with TickerProviderSt
                     child: widget.rotate?Transform.rotate(
                       angle: (_circleAnimation.value * widget.duration/15 * pi) -
                           (2 * pi * random),
-                      child: widget.icon==null?Container():Icon(widget.icon,
+                      child: Icon(widget.icon,
                         size: _animationStart
                             ? widget.radius*1.6
                             : innerBreathingRadius,

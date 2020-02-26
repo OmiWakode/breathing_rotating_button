@@ -12,12 +12,13 @@ class _SpinScreenState extends State<SpinScreen> {
 
   @override
   Widget build(BuildContext context) {
-    //customize your screen
+    // your screen
     return Material(
       color: Colors.white,
       child: Padding(
         padding: const EdgeInsets.all(40.0),
-        child: BreathingButton(background: Colors.teal, foreground: Colors.white, icon: Icons.person, radius: 70, duration: 1000, rotate: false,),
+        //Here is the widget called
+        child: BreathingRotatingButton(background: Colors.teal, foreground: Colors.white, icon: Icons.add, radius: 70, duration: 1000, rotate: true),
       ),
     );
   }

@@ -1,10 +1,10 @@
 name: breathing_rotating_button
-description: A new Flutter package.
-version: 1.0
+description: A Flutter package which has breathing and rotating animation button.
+version: 1.0.0
 authors:
   - Omi Wakode <omi.wakode@gmail.com>
   - Abhishek Upmanyu <abhi.rock2611@gmail.com>
-homepage:
+homepage: https://github.com/OmiWakode/breathing_rotating_button
 
 environment:
   sdk: ">=2.1.0 <3.0.0"

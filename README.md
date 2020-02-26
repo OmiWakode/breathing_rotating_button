@@ -1,9 +1,76 @@
 # breathing_rotating_button
 
-A new Flutter package.
+A Flutter package for custom made breathing button and rotating button written in Dart.
+
+### Do star the repo. Thanks :+1:
+### Screenshots
+ <img src = "Screenshot_20200226-181609.png" height = "300em"/> <img src = "Screenshot_20200226-181614.png" height = "300em"/>  <img src = "Screenshot_20200222-214140.png" height = "300em"/>
+
+## Usage
+[Example](https://github.com/OmiWakode/breathing_rotating_button/blob/master/example/example_app.dart)
+
+To use this package:
+ * add the dependency to your pubspec [pubspec.yaml](https://github.com/OmiWakode/breathing_rotating_button/blob/master/pubspec.yaml) file.
+ '''
+  yaml
+    dependencies:
+        flutter:
+            sdk: flutter
+        breathing_rotating_button:
+ '''
+### How to use
+ '''
+ dart
+ class SpinScreen extends StatefulWidget {
+   @override
+   _SpinScreenState createState() => _SpinScreenState();
+ }
+ 
+ class _SpinScreenState extends State<SpinScreen> {
+ 
+ 
+   @override
+   Widget build(BuildContext context) {
+     // your screen
+     return Material(
+       color: Colors.white,
+       child: Padding(
+         padding: const EdgeInsets.all(40.0),
+         /Here is the widget called
+         /*duration is in milliseconds and rest parameters are conventional, rotate is a bool which describes whether to rotate or not.
+         icon can also be added, but you can skip it if you want.
+         */That's it ;)
+         child: BreathingRotatingButton(background: Colors.teal, foreground: Colors.white, 
+         icon: Icons.person, iconColor: Colors.white, radius: 70, duration: 1000, rotate: true,),
+       ),
+     );
+   }
+ }
+'''
+### Created and Maintained by
+[Omi Wakode](https://github.com/OmiWakode)
+and
+[Abhishek Upmanyu](https://github.com/abhishekUpmanyu)
+
+###License
+
+    Copyright 2020 Omi Wakode
+    
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+ 
 
 ## Getting Started
-
 This project is a starting point for a Dart
 [package](https://flutter.dev/developing-packages/),
 a library module containing code that can be shared easily across
