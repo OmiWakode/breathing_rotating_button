@@ -2,32 +2,30 @@
 
 A Flutter package for custom made breathing and rotating button written in Dart.
 
-### Do star the repo. Thanks :+1:
+#### Do star the repo. Thanks :+1:
 ### Screenshots
- <img src = "Screenshot_20200226-181609.png" height = "300em"/> <img src = "Screenshot_20200226-181614.png" height = "300em"/>  <img src = "Screenshot_20200222-214140.png" height = "300em"/>
+ <img src = "Screenshot_20200226-181609.png" height = "300em"/> <img src = "Screenshot_20200226-181614.png" height = "300em"/>  <img src = "Screenshot_20200226-185336.png" height = "300em"/>
 
-## Usage
+### Usage
 [Example](https://github.com/OmiWakode/breathing_rotating_button/blob/master/example/example_app.dart)
-
 To use this package:
  * add the dependency to your pubspec [pubspec.yaml](https://github.com/OmiWakode/breathing_rotating_button/blob/master/pubspec.yaml) file.
- '''
+ ```
   yaml
     dependencies:
         flutter:
             sdk: flutter
         breathing_rotating_button:
- '''
+ ```
 ### How to use
- '''
- dart
+ ```
+  dart
  class SpinScreen extends StatefulWidget {
    @override
    _SpinScreenState createState() => _SpinScreenState();
  }
  
  class _SpinScreenState extends State<SpinScreen> {
- 
  
    @override
    Widget build(BuildContext context) {
@@ -36,24 +34,24 @@ To use this package:
        color: Colors.white,
        child: Padding(
          padding: const EdgeInsets.all(40.0),
-         /Here is the widget called
+         //The widget is called here
          /*duration is in milliseconds and rest parameters are conventional, rotate is a bool which describes whether to rotate or not.
          icon can also be added, but you can skip it if you want.
-         */That's it ;)
+         That's it ;)*/
          child: BreathingRotatingButton(background: Colors.teal, foreground: Colors.white, 
          icon: Icons.person, iconColor: Colors.white, radius: 70, duration: 1000, rotate: true,),
        ),
      );
    }
  }
-'''
+ ```
 ### Created and Maintained by
 [Omi Wakode](https://github.com/OmiWakode)
 and
 [Abhishek Upmanyu](https://github.com/abhishekUpmanyu)
 
 ###License
-
+```
     Copyright 2020 Omi Wakode
     
    Licensed under the Apache License, Version 2.0 (the "License");
@@ -67,15 +65,15 @@ and
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
-
+```
  
 
-## Getting Started
+### Getting Started
 This project is a starting point for a Dart
 [package](https://flutter.dev/developing-packages/),
 a library module containing code that can be shared easily across
 multiple Flutter or Dart projects.
 
-For help getting started with Flutter, view our 
+For help getting started with Flutter, view 
 [online documentation](https://flutter.dev/docs), which offers tutorials, 
 samples, guidance on mobile development, and a full API reference.
