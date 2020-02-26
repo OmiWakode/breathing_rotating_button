@@ -1,6 +1,6 @@
 # breathing_rotating_button
 
-A Flutter package for custom made breathing button and rotating button written in Dart.
+A Flutter package for custom made breathing and rotating button written in Dart.
 
 ### Do star the repo. Thanks :+1:
 ### Screenshots
