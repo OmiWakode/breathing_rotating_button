@@ -90,57 +90,53 @@ class _BreathingRotatingButtonState extends State<BreathingRotatingButton> with 
   Widget build(BuildContext context) {
     //customise your size here
     double outerBreathingRadius = widget.radius -
-        (widget.radius / 30) * _breathe;
+        (widget.radius / 24) * _breathe;
     double innerBreathingRadius = widget.radius*1.6 -
-        (widget.radius/ 25) * _breathe;
+        (widget.radius/ 20) * _breathe;
     //customize your screen
-    return SizedBox(
-      width: widget.radius,
-      height: widget.radius,
-      child: Padding(
-        padding: EdgeInsets.all(_animationStart1?widget.radius*_circleAnimation.value/8:0),
-        child: Column(
-          children: <Widget>[
-            GestureDetector(
-              onTap: () {
-                _circleAnimationController.forward();
-                _animationStart1 = true;
-                if (_animationStart) {
-                  random = Random().nextDouble();
-                }
-              },
-              //Change your shapes from here
-              child: CircleAvatar(
-                  radius: _animationStart1
-                      ? widget.radius-widget.radius*_circleAnimation.value/8
-                      : outerBreathingRadius, // 1st Circle
-                  backgroundColor: widget.background,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: widget.foreground, // 2nd Circle
-                      shape: BoxShape.circle,
-                    ),
-                    //This is the animation
-                    child: widget.rotate?Transform.rotate(
-                      angle: (_circleAnimation.value * widget.duration/15 * pi) -
-                          (2 * pi * random),
-                      child: Icon(widget.icon,
+    return Stack(
+      children: <Widget>[
+        Padding(
+          padding: EdgeInsets.all(_animationStart1?widget.radius*_circleAnimation.value/8:0),
+              child :GestureDetector(
+                onTap: () {
+                  _circleAnimationController.forward();
+                  _animationStart1 = true;
+                  if (_animationStart) {
+                    random = Random().nextDouble();
+                  }
+                },
+                //Change your shapes from here
+                child: CircleAvatar(
+                    radius: _animationStart1
+                        ? widget.radius-widget.radius*_circleAnimation.value/8
+                        : outerBreathingRadius, // 1st Circle
+                    backgroundColor: widget.background,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: widget.foreground, // 2nd Circle
+                        shape: BoxShape.circle,
+                      ),
+                      //This is the animation
+                      child: widget.rotate?Transform.rotate(
+                        angle: (_circleAnimation.value * widget.duration/15 * pi) -
+                            (2 * pi * random),
+                        child: Icon(widget.icon,
+                          size: _animationStart
+                              ? widget.radius*1.6
+                              : innerBreathingRadius,
+                          color: widget.iconColor,
+                        ),
+                      ):widget.icon==null?Container():Icon(widget.icon,
                         size: _animationStart
                             ? widget.radius*1.6
                             : innerBreathingRadius,
                         color: widget.iconColor,
                       ),
-                    ):widget.icon==null?Container():Icon(widget.icon,
-                      size: _animationStart
-                          ? widget.radius*1.6
-                          : innerBreathingRadius,
-                      color: widget.iconColor,
-                    ),
-                  )),
-            ),
-          ],
+                    )),
+          ),
         ),
-      ),
+      ],
     );
   }
 }
