@@ -4,8 +4,8 @@ A Flutter package for custom made breathing and rotating button written in Dart.
 
 #### Do star the repo. Thanks :+1:
 ### Screenshots
- <img src = "Screenshot_20200226-181609.png" height = "300em"/> <img src = "Screenshot_20200226-181614.png" height = "300em"/>  <img src = "Screenshot_20200226-213216.png" height = "300em"/>
-
+![image](https://raw.githubusercontent.com/abhishekUpmanyu/expanding_button/master/screenshot/animation.gif)
+![image](https://github.com/OmiWakode/breathing_rotating_button/blob/master/Screenshot_20200226-181609.png)
 ### Usage
 [Example](https://github.com/OmiWakode/breathing_rotating_button/blob/master/example/example_app.dart)
 To use this package:
@@ -45,8 +45,7 @@ To use this package:
  ```
 ### Created and Maintained by
 [Omi Wakode](https://github.com/OmiWakode)
-and
-[Abhishek Upmanyu](https://github.com/abhishekUpmanyu)
+
 
 
 

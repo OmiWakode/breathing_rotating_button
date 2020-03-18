@@ -11,7 +11,7 @@ class BreathingRotatingButton extends StatefulWidget {
   final double radius;
   final int duration;
   final bool rotate;
-  BreathingRotatingButton({@required this.radius, this.background, this.foreground,this.icon, this.iconColor=Colors.teal, this.duration=500,this.rotate});
+  BreathingRotatingButton({@required this.radius, this.background, this.foreground,this.icon, this.iconColor=Colors.teal, this.duration=500,this.rotate = true});
   @override
   _BreathingRotatingButtonState createState() => _BreathingRotatingButtonState();
 }
